@@ -26,4 +26,4 @@
 ### Aflevering
 - Commit og push ofte
 - Tænk over dine commit-beskeder. Din commit historik må gerne afspejle udviklingen i dit projekt med små beskrivelser. 
-- aflevér når dagen er gået ved at lave en pull-request.
+- aflevér ved at indsætte et link til dit GitHub repository på MitRTS.
