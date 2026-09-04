@@ -11,6 +11,10 @@ function createButton (icon, text) {
     return customButton
 }
 
+// main
+let mainElement = document.querySelector("main")
+mainElement.classList.add("main")
+
 // header
 let headerElement = document.querySelector(".header")
 
@@ -67,7 +71,32 @@ services.forEach(service => {
     serviceElement.append(serviceArticle)
 })
 
+// facilities
+const facilitiesElement = document.querySelector(".facilities")
 
+let facilitiesHeader = document.createElement("h3")
+facilitiesHeader.textContent = facilities.headline
+
+let facilitiesDiv = document.createElement("div")
+facilitiesDiv.classList.add("facilitiesDiv")
+
+facilitiesElement.append(facilitiesHeader, facilitiesDiv)
+
+facilities.options.forEach(option => {
+    const facilitiesArticle = document.createElement("article")
+
+    let facilitiesIcon = document.createElement("img")
+    facilitiesIcon.setAttribute("src", option.icon)
+
+    let facilitiesHeadline = document.createElement("h3")
+    facilitiesHeadline.textContent = option.headline
+
+    let facilitiesText = document.createElement("p")
+    facilitiesText.textContent = option.text
+
+    facilitiesArticle.append(facilitiesIcon, facilitiesHeadline, facilitiesText)
+    facilitiesDiv.append(facilitiesArticle)
+})
 
 
 
