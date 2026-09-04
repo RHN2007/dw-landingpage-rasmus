@@ -76,6 +76,7 @@ const facilitiesElement = document.querySelector(".facilities")
 
 let facilitiesHeader = document.createElement("h3")
 facilitiesHeader.textContent = facilities.headline
+facilitiesHeader.classList.add("facilities__header")
 
 let facilitiesDiv = document.createElement("div")
 facilitiesDiv.classList.add("facilitiesDiv")
@@ -84,6 +85,7 @@ facilitiesElement.append(facilitiesHeader, facilitiesDiv)
 
 facilities.options.forEach(option => {
     const facilitiesArticle = document.createElement("article")
+    facilitiesArticle.classList.add("facilities__article")
 
     let facilitiesIcon = document.createElement("img")
     facilitiesIcon.setAttribute("src", option.icon)
@@ -94,7 +96,10 @@ facilities.options.forEach(option => {
     let facilitiesText = document.createElement("p")
     facilitiesText.textContent = option.text
 
-    facilitiesArticle.append(facilitiesIcon, facilitiesHeadline, facilitiesText)
+    let facilitiesButton = document.createElement("button")
+    facilitiesButton.textContent = "Show me more"
+
+    facilitiesArticle.append(facilitiesIcon, facilitiesHeadline, facilitiesText, facilitiesButton)
     facilitiesDiv.append(facilitiesArticle)
 })
 
