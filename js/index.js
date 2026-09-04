@@ -53,6 +53,7 @@ heroElement.append(heroDiv)
 services.forEach(service => {
     const serviceElement = document.querySelector(".services")
     const serviceArticle = document.createElement("article")
+    serviceArticle.classList.add("service__article")
 
     let serviceIllustration = document.createElement("img")
     serviceIllustration.setAttribute("src", `${service.illustration}`)

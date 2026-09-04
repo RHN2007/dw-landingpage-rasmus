@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 :root {
@@ -19,6 +19,7 @@
     height: 4rem;
     padding-inline: 4rem;
     padding-block: 1rem;    
+    font-weight: bold;
 }
 
 /* Reset CSS */
@@ -79,7 +80,7 @@ body {
 }
 
 body {
-    font-family: "Merriweather", serif;
+    font-family: "Montserrat", serif;
     margin: auto;
     max-width: 1440px;
 }
@@ -138,15 +139,34 @@ body {
 
 .hero__div h1 {
     font-size: 2.75rem;
+    font-family: "Merriweather", sans-serif;
 }
 
 /* Services */
 .services {
-    max-width: 1300px;
+    max-width: 1250px;
     margin-inline: auto;
     display: flex;
     gap: 3rem;
     margin-block: 20rem;
+}
+
+.service__article img {
+    margin-block-end: 5rem;
+}
+
+.service__article h2, .service__article p, .service__article a {
+    margin-block: 1rem;
+}
+
+.service__article p {
+    color: gray;
+}
+
+.service__article a {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /* Facilities */
@@ -170,9 +190,14 @@ body {
 .facilities__article {
     overflow-wrap: anywhere;
     width: 30rem;
+    height: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .facilities__article img {
+    max-width: 2.5rem;
     margin-block: 3rem;
 }
 
@@ -184,11 +209,11 @@ body {
 .facilities__article p {
     font-size: 0.9rem;
     line-height: 1.5rem;
-    margin-block: 1rem;
     color: gray;
 }
 
 .facilities__article button {
     font-weight: bold;
+    font-size: 1.25rem;
     color: var(--primary-color);
 }
