@@ -1,3 +1,15 @@
+// universal
+function createButton (icon, text) {
+    const customButton = document.createElement("a")
+    const buttonText = document.createTextNode(text) // grunden til vi bruger textnode er pga .textcontent overskriver alle child elementerne, det resultere i at vores img bliver overskrevet og det kun er texten inde i a tagget.
+    let buttonIcon = document.createElement("img")
+    buttonIcon.setAttribute("src", `${icon}`)
+    customButton.classList.add("button")
+    
+    customButton.append(buttonIcon, buttonText)
+    return customButton
+}
+
 // header
 let headerElement = document.querySelector(".header")
 
@@ -26,8 +38,10 @@ heroParagraph.textContent = `${hero.copy}`
 
 const heroButton = document.createElement("a")
 
+const exploreButton = createButton(hero.icon, "Explore")
 
-heroDiv.append(heroHeader, heroParagraph)
+
+heroDiv.append(heroHeader, heroParagraph, exploreButton)
 heroElement.append(heroDiv)
 
 

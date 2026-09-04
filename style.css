@@ -1,6 +1,26 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
+
+:root {
+    --primary-color: #F78065;
+}
+
+/* Universal styling */
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #F78065;
+    color: white;
+    max-width: 15rem;
+    height: 4rem;
+    padding-inline: 4rem;
+    padding-block: 1rem;    
+}
+
 /* Reset CSS */
 /* Box sizing rules */
 *,
@@ -100,13 +120,20 @@ body {
 }
 
 .hero__div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: white;
     width: 45rem;
     height: 35rem;
-    padding-block: 5rem;
-    padding-inline: 4rem;
+    padding-block: 5rem 5rem;
+    padding-inline: 4rem 10rem;
     position: absolute;
     left: 5rem;
     bottom: -15rem;
     border: 1px solid black;
+}
+
+.hero__div h1 {
+    font-size: 2.75rem;
 }
