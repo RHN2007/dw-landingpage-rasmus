@@ -18,7 +18,7 @@
     max-width: 15rem;
     height: 4rem;
     padding-inline: 4rem;
-    padding-block: 1rem;    
+    padding-block: 1rem;
     font-weight: bold;
 }
 
@@ -90,19 +90,26 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 7.5rem;
+    padding-block: 2.5rem;
     z-index: 10;
     font-weight: bold;
     display: flex;
     align-items: center;
-    padding-inline: 1rem;
-    gap: 0.5rem;
     position: absolute;
+    width: 100%;
+}
+
+.header__div {
+    display: flex;
+    justify-content: space-between;
     border-radius: 2rem;
     background-color: white;
-    width: 5rem;
-    height: 3rem;
-    right: 10rem;
-    top: 2rem;
+    padding-inline: 1.25rem;
+    padding-block: 0.75rem;
+    gap: 0.5rem;
 }
 
 .header__arrow {
@@ -124,6 +131,7 @@ body {
 }
 
 .hero__div {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -155,7 +163,9 @@ body {
     margin-block-end: 5rem;
 }
 
-.service__article h2, .service__article p, .service__article a {
+.service__article h2,
+.service__article p,
+.service__article a {
     margin-block: 1rem;
 }
 

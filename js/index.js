@@ -18,6 +18,12 @@ mainElement.classList.add("main")
 // header
 let headerElement = document.querySelector(".header")
 
+let headerLogo = document.createElement("img")
+headerLogo.setAttribute("src", "assets/cube 1.svg")
+
+let headerDiv = document.createElement("div")
+headerDiv.classList.add("header__div") 
+
 let headerArrow = document.createElement("p")
 headerArrow.textContent = `<`
 headerArrow.classList.add("header__arrow")
@@ -26,7 +32,8 @@ let headerAvatar = document.createElement("img")
 headerAvatar.setAttribute("src", "https://placehold.co/32x32")
 headerAvatar.classList.add("header__avatar")
 
-headerElement.append(headerArrow, headerAvatar)
+headerDiv.append(headerArrow, headerAvatar)
+headerElement.append(headerLogo, headerDiv)
 
 // hero
 let heroElement = document.querySelector(".hero")
@@ -52,7 +59,7 @@ heroElement.append(heroDiv)
 // services
 services.forEach(service => {
     const serviceElement = document.querySelector(".services")
-    const serviceArticle = document.createElement("article")
+    const serviceArticle = document.createElement("article") // kunne evt også smide dem ind i en ul
     serviceArticle.classList.add("service__article")
 
     let serviceIllustration = document.createElement("img")
@@ -103,6 +110,8 @@ facilities.options.forEach(option => {
     facilitiesArticle.append(facilitiesIcon, facilitiesHeadline, facilitiesText, facilitiesButton)
     facilitiesDiv.append(facilitiesArticle)
 })
+
+// sites
 
 
 
